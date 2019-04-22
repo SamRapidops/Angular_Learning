@@ -1,0 +1,27 @@
+<!--one way bindng-->
+<h1>{{pageTitle}}</h1>
+<div>
+  <img [src]="imgUrl" alt="Image">
+</div>
+
+<div>
+  <button (click)="incrementCount()">Click</button>
+  <p>clicked {{count}} times</p>
+</div>
+
+<!--two way bindng--> 
+
+<div>
+  <input #nameRef type="text" [(ngModel)]="name">
+  <p>Welcome {{ name }}</p>
+</div>
+
+<div>
+  <input type="text" [ngModel]="username" (ngModelChange)="greetSam($event)">
+  <p>Welcome {{ username }}</p>
+</div>
+
+<div>
+  <input type="text" [(ngModel)]="customerName">
+  <p>Welcome {{ customerName }}</p>
+</div>
